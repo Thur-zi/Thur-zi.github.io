@@ -1,0 +1,7 @@
+# dados internos do levantamento, backups e configuração local
+_inv/
+.claude/
+# prints em tamanho cheio (o site usa as miniaturas em assets/arquivo/t/)
+assets/arquivo/*.jpg
+# rascunho da proposta de marca
+assets/brand/marca-arthur-gil.html
