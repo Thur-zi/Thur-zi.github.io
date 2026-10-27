@@ -1,23 +1,18 @@
 # Chibis do portfólio
 
-Cada arquivo abaixo aparece sozinho na página assim que for salvo nesta pasta.
-Enquanto não existir, a página mostra um contorno pontilhado no lugar.
+Salve cada desenho nesta pasta com um destes nomes. Ele aparece sozinho no lugar indicado; enquanto o arquivo não existir, o site mostra só um contorno pontilhado.
 
-O personagem é um figurante silencioso: sem balão de fala e sem texto na arte.
+| Arquivo | Onde aparece |
+|---|---|
+| `chibi-1.png` | Topo, em pé sobre o nome "ARTHUR GIL" |
+| `chibi-2.png` | Seção de cases, pendurado por um fio no canto direito (a arte entra como está, sem girar) |
+| `chibi-3.png` | Seção "Sobre", ao lado do texto |
+| `chibi-4.png` | Seção "Sobre", ao lado da lista de stack |
+| `chibi-5.png` | Contato, à esquerda do título |
 
-## Especificação
+## Formato
 
 - PNG com fundo transparente
-- Proporção vertical de 200 × 260 (ex.: 1000 × 1300 px)
+- Proporção vertical de 200 × 260 (por exemplo, 1000 × 1300 px)
 - Personagem inteiro, com margem pequena em volta
-- Sem sombra no chão (a página já aplica uma sombra suave)
-
-## Arquivos
-
-| Arquivo | Onde aparece | Pose |
-|---|---|---|
-| `terno.png` | Topo, em pé sobre o nome "Arthur Gil" | De terno, confiante, olhando para quem chega |
-| `aranha.png` | Lista de cases, pendurado por um fio | Roupa de aranha, **de cabeça para baixo** (a arte já deve vir invertida) |
-| `cruzeiro.png` | Seção "Sobre" | Camisa do Cruzeiro, comemorando |
-| `relogio.png` | Ao lado da lista de stack | Olhando para o relógio verde no pulso |
-| `kamehameha.png` | Contato, à esquerda do título | Soltando o kamehameha **para a direita** (na direção do botão) |
+- Sem sombra no chão (o site já aplica uma sombra suave)

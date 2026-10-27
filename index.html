@@ -476,7 +476,7 @@ h1,h2,h3,h4{letter-spacing:-.03em}
 </style>
 <style>
 /* ================= v5 · cases: mural de telas em 3D ================= */
-.reel{display:grid;grid-template-columns:minmax(0,.86fr) minmax(0,1.14fr);gap:clamp(24px,3.5vw,56px);align-items:stretch}
+.reel{display:grid;grid-template-columns:minmax(0,.86fr) minmax(0,1.14fr);gap:clamp(24px,3.5vw,56px);align-items:start}
 .reel-list{display:flex;flex-direction:column;justify-content:center;padding-block:20px;position:relative;z-index:2}
 .reel-head .n{color:var(--accent)}
 .reel-head h2{font:600 clamp(30px,3.7vw,58px)/1.02 var(--display);letter-spacing:-.04em;margin:14px 0 14px}
@@ -497,7 +497,7 @@ h1,h2,h3,h4{letter-spacing:-.03em}
 .reel-rows a.on .num{color:var(--accent)}
 .reel-rows a.on .ar{opacity:1;transform:none}
 
-.wall-wrap{position:relative;min-height:clamp(560px,88vh,860px);margin-right:calc(var(--gut) * -1);border-radius:28px 0 0 28px;overflow:hidden;perspective:1700px;border:1px solid var(--line);border-right:0;background:radial-gradient(70% 60% at 60% 40%,rgba(47,107,255,.14),transparent 70%),#050C19;--mx:0;--my:0;--cx:50%;--cy:50%}
+.wall-wrap{position:sticky;top:11vh;height:78vh;min-height:520px;margin-right:calc(var(--gut) * -1);border-radius:28px 0 0 28px;overflow:hidden;perspective:1700px;border:1px solid var(--line);border-right:0;background:radial-gradient(70% 60% at 60% 40%,rgba(47,107,255,.14),transparent 70%),#050C19;--mx:0;--my:0;--cx:50%;--cy:50%}
 .wall-wrap::before{content:"";position:absolute;inset:0;z-index:2;pointer-events:none;background:linear-gradient(90deg,#050C19 0%,transparent 18%,transparent 82%,rgba(5,12,25,.6) 100%),linear-gradient(180deg,#050C19 0%,transparent 16%,transparent 84%,#050C19 100%)}
 .wall-wrap::after{content:"";position:absolute;inset:0;z-index:3;pointer-events:none;background:radial-gradient(420px circle at var(--cx) var(--cy),rgba(46,229,157,.09),transparent 60%)}
 .wall{position:absolute;left:50%;top:50%;width:150%;--shift:0px;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:22px;transform-style:preserve-3d;
@@ -519,7 +519,7 @@ h1,h2,h3,h4{letter-spacing:-.03em}
 
 @media (max-width:860px){
   .reel{grid-template-columns:minmax(0,1fr)}
-  .wall-wrap{order:-1;min-height:420px;margin-left:calc(var(--gut) * -1);border-radius:0;border-inline:0}
+  .wall-wrap{order:-1;position:relative;top:auto;height:auto;min-height:420px;margin-left:calc(var(--gut) * -1);border-radius:0;border-inline:0}
   .wall{width:190%;gap:14px}
   .tile{margin-bottom:14px;border-radius:8px}
   .reel-rows a{padding:15px 0}
@@ -660,13 +660,12 @@ a.ac:hover .at img{transform:scale(1.05)}
   </div>
   <div class="name-wrap">
     <figure class="chibi chibi-hero float" data-chibi>
-      <img src="assets/chibi/terno.png" alt="" onerror="this.closest('.chibi').classList.add('is-empty')">
-      <figcaption class="mono">chibi · de terno</figcaption>
+      <img src="assets/chibi/chibi-1.png" alt="" onerror="this.closest('.chibi').classList.add('is-empty')">
     </figure>
     <h1 class="hero-name" aria-label="Arthur Gil">Arthur <span class="gil">Gil</span></h1>
   </div>
   <div class="hero-row">
-    <p class="hero-lead" data-reveal>Desenvolvedor front-end que transforma <em>campanhas, dados e negócios</em> em produto no ar.</p>
+    <p class="hero-lead" data-reveal>Dev front-end em Minas. Faço <em>site de campanha</em>, painel de dados e sistema para empresa.</p>
     <div class="hero-meta mono" data-reveal>
       <div><span>Foco</span><b>Landings, painéis e SaaS</b></div>
       <div><span>Último grande deploy</span><b>Eleições 2026</b></div>
@@ -678,13 +677,12 @@ a.ac:hover .at img{transform:scale(1.05)}
 
 <div class="sheet" id="sheet">
 <div class="ambient" id="ambient"></div>
-<div class="odos" id="odos"><div class="odo-stat"><span class="od" data-n="64" data-sfx="" aria-label="64">64</span><span class="mono">projetos no ar agora</span></div><div class="odo-stat"><span class="od" data-n="13" data-sfx="" aria-label="13">13</span><span class="mono">campanhas atendidas em 2026</span></div><div class="odo-stat"><span class="od" data-n="27" data-sfx="" aria-label="27">27</span><span class="mono">cards, molduras e colinhas</span></div><div class="odo-stat"><span class="od" data-n="06" data-sfx="" aria-label="06">06</span><span class="mono">estados: AL, MG, PA, PE, SC, SP</span></div></div>
+<div class="odos" id="odos"><div class="odo-stat"><span class="od" data-n="63" data-sfx="" aria-label="63">63</span><span class="mono">projetos no ar agora</span></div><div class="odo-stat"><span class="od" data-n="13" data-sfx="" aria-label="13">13</span><span class="mono">campanhas atendidas em 2026</span></div><div class="odo-stat"><span class="od" data-n="27" data-sfx="" aria-label="27">27</span><span class="mono">cards, molduras e colinhas</span></div><div class="odo-stat"><span class="od" data-n="06" data-sfx="" aria-label="06">06</span><span class="mono">estados: AL, MG, PA, PE, SC, SP</span></div></div>
 
 <!-- =============== ÍNDICE =============== -->
 <section class="sec idx" id="cases">
   <figure class="chibi chibi-spider swing" data-chibi>
-    <img src="assets/chibi/aranha.png" alt="" onerror="this.closest('.chibi').classList.add('is-empty')">
-    <figcaption class="mono">chibi · aranha</figcaption>
+    <img src="assets/chibi/chibi-2.png" alt="" onerror="this.closest('.chibi').classList.add('is-empty')">
   </figure>
   <div class="reel">
     <div class="reel-list">
@@ -729,7 +727,7 @@ a.ac:hover .at img{transform:scale(1.05)}
     <div>
       <p class="case-sub" data-reveal>Mobilização digital do 2º turno no Nordeste, <em>um site por estado</em>: a cartilha da campanha virou página, e cada apoiador ganha card, moldura, figurinhas e missões diárias.</p>
       <dl class="ficha" data-reveal>
-        <div><dt>Cliente</dt><dd>Campanha Flávio 22 · vice Alfredo Gaspar, via MOBI</dd></div>
+        <div><dt>Cliente</dt><dd>Campanha presidencial Bolsonaro (Flávio 22 · vice Alfredo Gaspar), via MOBI</dd></div>
         <div><dt>Ano</dt><dd>2026</dd></div>
         <div><dt>Papel</dt><dd>Produto, front-end, back-end e painel</dd></div>
         <div><dt>Stack</dt><dd>React · TypeScript · Supabase · Canvas · Motion + Lenis</dd></div>
@@ -1183,7 +1181,7 @@ a.ac:hover .at img{transform:scale(1.05)}
   <div class="sec-head">
     <span class="n mono" data-scramble>(02)</span>
     <h2 data-split>Tudo que já foi pro ar</h2>
-    <span class="aside mono">64 projetos<br>13 campanhas · 6 estados</span>
+    <span class="aside mono">63 projetos<br>13 campanhas · 6 estados</span>
   </div>
   <div class="kits-wrap">
     <div class="kits-intro">
@@ -1195,7 +1193,7 @@ a.ac:hover .at img{transform:scale(1.05)}
 <div class="kr"><span class="kn"><b>Rodrigo Spada</b><span class="mono">SP</span></span><span class="kc" data-col="Mobilização"><a class="kd" href="https://amigosdospada.com.br" target="_blank" rel="noopener" title="Amigos do Spada — Em defesa do que importa pra São Paulo" style="--i:1" data-cursor="Abrir ↗" aria-label="Mobilização: Amigos do Spada — Em defesa do que importa pra São Paulo"></a></span><span class="kc" data-col="Landing"><a class="kd" href="https://contadores.amigosdospada.com.br" target="_blank" rel="noopener" title="Contadores com Spada: menos burocracia, mais voz em Brasília" style="--i:2" data-cursor="Abrir ↗" aria-label="Landing: Contadores com Spada: menos burocracia, mais voz em Brasília"></a><a class="kd" href="https://terceirosetor.amigosdospada.com.br" target="_blank" rel="noopener" title="Terceiro Setor com Spada" style="--i:3" data-cursor="Abrir ↗" aria-label="Landing: Terceiro Setor com Spada"></a><a class="kd" href="https://ecommerce.amigosdospada.com.br" target="_blank" rel="noopener" title="E-commerce com Spada: menos burocracia para quem vende pela internet" style="--i:4" data-cursor="Abrir ↗" aria-label="Landing: E-commerce com Spada: menos burocracia para quem vende pela internet"></a><a class="kd" href="https://encontroliderancas.amigosdospada.com.br/treinamento" target="_blank" rel="noopener" title="Treinamento de Lideranças Spada" style="--i:5" data-cursor="Abrir ↗" aria-label="Landing: Treinamento de Lideranças Spada"></a><a class="kd" href="https://fabio.amigosdospada.com.br" target="_blank" rel="noopener" title="Rodrigo Spada e Fabio Villa Verde" style="--i:6" data-cursor="Abrir ↗" aria-label="Landing: Rodrigo Spada e Fabio Villa Verde"></a><a class="kd" href="https://fernanda.amigosdospada.com.br" target="_blank" rel="noopener" title="Rodrigo Spada e Fernanda Gabriela" style="--i:7" data-cursor="Abrir ↗" aria-label="Landing: Rodrigo Spada e Fernanda Gabriela"></a></span><span class="kc" data-col="Card"><a class="kd" href="https://baixeseucard.amigosdospada.com.br" target="_blank" rel="noopener" title="Sou de São Paulo e estou com Spada 5510" style="--i:9" data-cursor="Abrir ↗" aria-label="Card: Sou de São Paulo e estou com Spada 5510"></a></span><span class="kc" data-col="Moldura"><a class="kd" href="https://amigosdospada.com.br/moldura" target="_blank" rel="noopener" title="Eu apoio Rodrigo Spada" style="--i:10" data-cursor="Abrir ↗" aria-label="Moldura: Eu apoio Rodrigo Spada"></a></span><span class="kc" data-col="Colinha"><a class="kd" href="https://amigosdospada.com.br/colinha" target="_blank" rel="noopener" title="Minha Colinha — Rodrigo Spada 5510" style="--i:11" data-cursor="Abrir ↗" aria-label="Colinha: Minha Colinha — Rodrigo Spada 5510"></a></span><span class="kt mono">10</span></div>
 <div class="kr"><span class="kn"><b>Ana Paula Siqueira</b><span class="mono">MG</span></span><span class="kc" data-col="Mobilização"><a class="kd" href="https://timeana.com.br" target="_blank" rel="noopener" title="Junte-se ao Time da Ana" style="--i:12" data-cursor="Abrir ↗" aria-label="Mobilização: Junte-se ao Time da Ana"></a><a class="kd" href="https://minasporelas.com.br" target="_blank" rel="noopener" title="Toda mulher merece viver com respeito, segurança e proteção" style="--i:13" data-cursor="Abrir ↗" aria-label="Mobilização: Toda mulher merece viver com respeito, segurança e proteção"></a></span><span class="kc" data-col="Landing"><a class="kd" href="https://minasquecuida.timeana.com.br/" target="_blank" rel="noopener" title="Minas que Cuida: petição pela valorização dos cuidadores de idosos" style="--i:14" data-cursor="Abrir ↗" aria-label="Landing: Minas que Cuida: petição pela valorização dos cuidadores de idosos"></a></span><span class="kc" data-col="Card"><a class="kd" href="https://card-ana-paula-siqueira.pages.dev" target="_blank" rel="noopener" title="Sou de Minas e estou com Ana Paula Siqueira 13444" style="--i:15" data-cursor="Abrir ↗" aria-label="Card: Sou de Minas e estou com Ana Paula Siqueira 13444"></a></span><span class="kc" data-col="Moldura"><a class="kd" href="https://timeana.com.br/moldura" target="_blank" rel="noopener" title="Coloque o 13444 na sua foto de perfil" style="--i:16" data-cursor="Abrir ↗" aria-label="Moldura: Coloque o 13444 na sua foto de perfil"></a></span><span class="kc" data-col="Colinha"><a class="kd" href="https://timeana.com.br/colinha" target="_blank" rel="noopener" title="Faça a sua colinha com a Ana Paula Siqueira 13444" style="--i:17" data-cursor="Abrir ↗" aria-label="Colinha: Faça a sua colinha com a Ana Paula Siqueira 13444"></a></span><span class="kt mono">6</span></div>
 <div class="kr"><span class="kn"><b>Wanderley Porto e Fred Costa</b><span class="mono">MG</span></span><span class="kc" data-col="Mobilização"><a class="kd" href="https://tocomwanderley.com.br" target="_blank" rel="noopener" title="Tô com Wanderley — Wanderley Porto 25333" style="--i:18" data-cursor="Abrir ↗" aria-label="Mobilização: Tô com Wanderley — Wanderley Porto 25333"></a></span><span class="kc empty" data-col="Landing"><i></i></span><span class="kc" data-col="Card"><a class="kd" href="https://baixeseucard.tocomwanderley.com.br" target="_blank" rel="noopener" title="Sou de Minas e estou com Wanderley Porto 25333" style="--i:19" data-cursor="Abrir ↗" aria-label="Card: Sou de Minas e estou com Wanderley Porto 25333"></a><a class="kd" href="https://cardfredcosta.tocomwanderley.com.br" target="_blank" rel="noopener" title="Sou de Minas e estou com Fred Costa 2533 e Wanderley Porto 25333" style="--i:20" data-cursor="Abrir ↗" aria-label="Card: Sou de Minas e estou com Fred Costa 2533 e Wanderley Porto 25333"></a></span><span class="kc" data-col="Moldura"><a class="kd" href="https://eutambem.tocomwanderley.com.br" target="_blank" rel="noopener" title="Eu Tô com o Wanderley!" style="--i:21" data-cursor="Abrir ↗" aria-label="Moldura: Eu Tô com o Wanderley!"></a></span><span class="kc" data-col="Colinha"><a class="kd" href="https://minhacolinha.tocomwanderley.com.br" target="_blank" rel="noopener" title="Colinha de votação — Tô com Wanderley 25333" style="--i:22" data-cursor="Abrir ↗" aria-label="Colinha: Colinha de votação — Tô com Wanderley 25333"></a><a class="kd" href="https://colinha.tocomwanderley.com.br" target="_blank" rel="noopener" title="Colinha de votação — Tô com Wanderley 25333 e Tô com Fred 2533" style="--i:23" data-cursor="Abrir ↗" aria-label="Colinha: Colinha de votação — Tô com Wanderley 25333 e Tô com Fred 2533"></a></span><span class="kt mono">6</span></div>
-<div class="kr"><span class="kn"><b>Flávio 22 e Alfredo Gaspar</b><span class="mono">AL</span></span><span class="kc" data-col="Mobilização"><a class="kd" href="https://mudanordeste.flaviobolsonaro.com.br" target="_blank" rel="noopener" title="Muda Nordeste com Flávio 22 · A hora é agora" style="--i:24" data-cursor="Abrir ↗" aria-label="Mobilização: Muda Nordeste com Flávio 22 · A hora é agora"></a><a class="kd" href="https://acordanordeste.com.br" target="_blank" rel="noopener" title="Acorda Nordeste — Ordem, fé e trabalho" style="--i:25" data-cursor="Abrir ↗" aria-label="Mobilização: Acorda Nordeste — Ordem, fé e trabalho"></a><a class="kd" href="https://timedoalfredo.com.br" target="_blank" rel="noopener" title="Vem pro time do Alfredo Gaspar" style="--i:26" data-cursor="Abrir ↗" aria-label="Mobilização: Vem pro time do Alfredo Gaspar"></a></span><span class="kc empty" data-col="Landing"><i></i></span><span class="kc" data-col="Card"><a class="kd" href="https://mudanordeste.flaviobolsonaro.com.br/card" target="_blank" rel="noopener" title="Baixe seu card · Muda Nordeste com Flávio 22" style="--i:27" data-cursor="Abrir ↗" aria-label="Card: Baixe seu card · Muda Nordeste com Flávio 22"></a></span><span class="kc" data-col="Moldura"><a class="kd" href="https://molduramudanordeste.flaviobolsonaro.com.br" target="_blank" rel="noopener" title="Moldura para foto · Muda Nordeste com Flávio 22" style="--i:28" data-cursor="Abrir ↗" aria-label="Moldura: Moldura para foto · Muda Nordeste com Flávio 22"></a></span><span class="kc empty" data-col="Colinha"><i></i></span><span class="kt mono">5</span></div>
+<div class="kr"><span class="kn"><b>Campanha presidencial Bolsonaro</b><span class="mono">Nordeste</span></span><span class="kc" data-col="Mobilização"><a class="kd" href="https://mudanordeste.flaviobolsonaro.com.br" target="_blank" rel="noopener" title="Muda Nordeste com Flávio 22 · A hora é agora" style="--i:24" data-cursor="Abrir ↗" aria-label="Mobilização: Muda Nordeste com Flávio 22 · A hora é agora"></a><a class="kd" href="https://timedoalfredo.com.br" target="_blank" rel="noopener" title="Vem pro time do Alfredo Gaspar" style="--i:26" data-cursor="Abrir ↗" aria-label="Mobilização: Vem pro time do Alfredo Gaspar"></a></span><span class="kc empty" data-col="Landing"><i></i></span><span class="kc" data-col="Card"><a class="kd" href="https://mudanordeste.flaviobolsonaro.com.br/card" target="_blank" rel="noopener" title="Baixe seu card · Muda Nordeste com Flávio 22" style="--i:27" data-cursor="Abrir ↗" aria-label="Card: Baixe seu card · Muda Nordeste com Flávio 22"></a></span><span class="kc" data-col="Moldura"><a class="kd" href="https://molduramudanordeste.flaviobolsonaro.com.br" target="_blank" rel="noopener" title="Moldura para foto · Muda Nordeste com Flávio 22" style="--i:28" data-cursor="Abrir ↗" aria-label="Moldura: Moldura para foto · Muda Nordeste com Flávio 22"></a></span><span class="kc empty" data-col="Colinha"><i></i></span><span class="kt mono">4</span></div>
 <div class="kr"><span class="kn"><b>Felipe do Dalmo Ribeiro</b><span class="mono">MG</span></span><span class="kc empty" data-col="Mobilização"><i></i></span><span class="kc" data-col="Landing"><a class="kd" href="https://feliperibeiro.tocomwanderley.com.br" target="_blank" rel="noopener" title="Felipe do Dalmo Ribeiro — Itajubá e região" style="--i:29" data-cursor="Abrir ↗" aria-label="Landing: Felipe do Dalmo Ribeiro — Itajubá e região"></a></span><span class="kc" data-col="Card"><a class="kd" href="https://baixeseucard.feliperibeiromg.com.br" target="_blank" rel="noopener" title="Sou de Minas e estou com Felipe do Dalmo Ribeiro" style="--i:30" data-cursor="Abrir ↗" aria-label="Card: Sou de Minas e estou com Felipe do Dalmo Ribeiro"></a><a class="kd" href="https://cardcleitinho.feliperibeiromg.com.br" target="_blank" rel="noopener" title="Sou de Minas e estou com Felipe 2022 e Cleitinho 10" style="--i:31" data-cursor="Abrir ↗" aria-label="Card: Sou de Minas e estou com Felipe 2022 e Cleitinho 10"></a></span><span class="kc empty" data-col="Moldura"><i></i></span><span class="kc" data-col="Colinha"><a class="kd" href="https://colinha.feliperibeiromg.com.br" target="_blank" rel="noopener" title="Faça a sua colinha com o 2022 — Felipe Ribeiro" style="--i:32" data-cursor="Abrir ↗" aria-label="Colinha: Faça a sua colinha com o 2022 — Felipe Ribeiro"></a></span><span class="kt mono">4</span></div>
 <div class="kr"><span class="kn"><b>Enfermeira Erika</b><span class="mono">MG</span></span><span class="kc" data-col="Mobilização"><a class="kd" href="https://enfermeiraerika.com.br" target="_blank" rel="noopener" title="#Tô Com A Enfermeira Erika" style="--i:33" data-cursor="Abrir ↗" aria-label="Mobilização: #Tô Com A Enfermeira Erika"></a></span><span class="kc empty" data-col="Landing"><i></i></span><span class="kc" data-col="Card"><a class="kd" href="https://baixeseucard.enfermeiraerika.com.br" target="_blank" rel="noopener" title="Sou de Minas e estou com a Enfermeira Erika 2510" style="--i:34" data-cursor="Abrir ↗" aria-label="Card: Sou de Minas e estou com a Enfermeira Erika 2510"></a></span><span class="kc" data-col="Moldura"><a class="kd" href="https://tocomaerika.enfermeiraerika.com.br" target="_blank" rel="noopener" title="Coloque o 2510 na sua foto de perfil" style="--i:35" data-cursor="Abrir ↗" aria-label="Moldura: Coloque o 2510 na sua foto de perfil"></a></span><span class="kc" data-col="Colinha"><a class="kd" href="https://colinha.enfermeiraerika.com.br" target="_blank" rel="noopener" title="Faça a sua colinha de votação — #Tô Com A Enfermeira Erika" style="--i:36" data-cursor="Abrir ↗" aria-label="Colinha: Faça a sua colinha de votação — #Tô Com A Enfermeira Erika"></a></span><span class="kt mono">4</span></div>
 <div class="kr"><span class="kn"><b>Professor Juliano Lopes</b><span class="mono">MG</span></span><span class="kc" data-col="Mobilização"><a class="kd" href="https://timedojuliano.com.br" target="_blank" rel="noopener" title="Time do Juliano | Juntos por Minas, sempre presente" style="--i:37" data-cursor="Abrir ↗" aria-label="Mobilização: Time do Juliano | Juntos por Minas, sempre presente"></a></span><span class="kc empty" data-col="Landing"><i></i></span><span class="kc" data-col="Card"><a class="kd" href="https://baixeseucard.timedojuliano.com.br" target="_blank" rel="noopener" title="Sou de Minas e estou com o Professor Juliano Lopes 20789" style="--i:38" data-cursor="Abrir ↗" aria-label="Card: Sou de Minas e estou com o Professor Juliano Lopes 20789"></a></span><span class="kc" data-col="Moldura"><a class="kd" href="https://timedojuliano.com.br/moldura" target="_blank" rel="noopener" title="Coloque o 20789 na sua foto de perfil" style="--i:39" data-cursor="Abrir ↗" aria-label="Moldura: Coloque o 20789 na sua foto de perfil"></a></span><span class="kc empty" data-col="Colinha"><i></i></span><span class="kt mono">3</span></div>
@@ -1211,7 +1209,7 @@ a.ac:hover .at img{transform:scale(1.05)}
     <div><h3>Todos os projetos</h3><p>Filtre por tipo. O que saiu do ar continua registrado aqui.</p></div>
     <label class="only-live mono"><input type="checkbox" id="only-live"> só o que está no ar</label>
   </div>
-  <div class="chips" id="chips" role="toolbar" aria-label="Filtrar projetos"><button class="chip on" data-f="todos" aria-pressed="true">Todos<span>64</span></button><button class="chip" data-f="mob" aria-pressed="false">Mobilização<span>11</span></button><button class="chip" data-f="land" aria-pressed="false">Landings<span>18</span></button><button class="chip" data-f="card" aria-pressed="false">Cards<span>11</span></button><button class="chip" data-f="mold" aria-pressed="false">Molduras<span>6</span></button><button class="chip" data-f="col" aria-pressed="false">Colinhas<span>10</span></button><button class="chip" data-f="dados" aria-pressed="false">Dados<span>2</span></button><button class="chip" data-f="inst" aria-pressed="false">Institucional e SaaS<span>6</span></button></div>
+  <div class="chips" id="chips" role="toolbar" aria-label="Filtrar projetos"><button class="chip on" data-f="todos" aria-pressed="true">Todos<span>63</span></button><button class="chip" data-f="mob" aria-pressed="false">Mobilização<span>10</span></button><button class="chip" data-f="land" aria-pressed="false">Landings<span>18</span></button><button class="chip" data-f="card" aria-pressed="false">Cards<span>11</span></button><button class="chip" data-f="mold" aria-pressed="false">Molduras<span>6</span></button><button class="chip" data-f="col" aria-pressed="false">Colinhas<span>10</span></button><button class="chip" data-f="dados" aria-pressed="false">Dados<span>2</span></button><button class="chip" data-f="inst" aria-pressed="false">Institucional e SaaS<span>6</span></button></div>
   <div class="arq-grid" id="arq-grid">
 <a class="ac" data-f="land" data-live="1" href="https://contadores.amigosdospada.com.br" target="_blank" rel="noopener" data-cursor="Abrir ↗"><span class="at"><img src="assets/arquivo/t/spada-contadores.jpg" alt="" loading="lazy"></span><span class="ab"><span class="ak mono">Landing</span><b>Contadores com Spada: menos burocracia, mais voz em Brasília</b><span class="am mono">Rodrigo Spada · SP · set 2026</span><span class="ast on">no ar</span></span></a>
 <a class="ac" data-f="land" data-live="1" href="https://terceirosetor.amigosdospada.com.br" target="_blank" rel="noopener" data-cursor="Abrir ↗"><span class="at"><img src="assets/arquivo/t/spada-terceiro-setor.jpg" alt="" loading="lazy"></span><span class="ab"><span class="ak mono">Landing</span><b>Terceiro Setor com Spada</b><span class="am mono">Rodrigo Spada · SP · set 2026</span><span class="ast on">no ar</span></span></a>
@@ -1235,10 +1233,9 @@ a.ac:hover .at img{transform:scale(1.05)}
 <a class="ac" data-f="col" data-live="1" href="https://minhacolinha.tocomwanderley.com.br" target="_blank" rel="noopener" data-cursor="Abrir ↗"><span class="at"><img src="assets/arquivo/t/wanderley-colinha.jpg" alt="" loading="lazy"></span><span class="ab"><span class="ak mono">Colinha</span><b>Colinha de votação — Tô com Wanderley 25333</b><span class="am mono">Wanderley Porto · MG · ago 2026</span><span class="ast on">no ar</span></span></a>
 <a class="ac" data-f="col" data-live="1" href="https://colinha.tocomwanderley.com.br" target="_blank" rel="noopener" data-cursor="Abrir ↗"><span class="at"><img src="assets/arquivo/t/wanderley-fred-colinha.jpg" alt="" loading="lazy"></span><span class="ab"><span class="ak mono">Colinha</span><b>Colinha de votação — Tô com Wanderley 25333 e Tô com Fred 2533</b><span class="am mono">Wanderley Porto e Fred Costa · MG · ago 2026</span><span class="ast on">no ar</span></span></a>
 <a class="ac" data-f="mold" data-live="1" href="https://eutambem.tocomwanderley.com.br" target="_blank" rel="noopener" data-cursor="Abrir ↗"><span class="at"><img src="assets/arquivo/t/wanderley-moldura.jpg" alt="" loading="lazy"></span><span class="ab"><span class="ak mono">Moldura</span><b>Eu Tô com o Wanderley!</b><span class="am mono">Wanderley Porto · MG · ago 2026</span><span class="ast on">no ar</span></span></a>
-<a class="ac" data-f="mob" data-live="1" href="https://mudanordeste.flaviobolsonaro.com.br" target="_blank" rel="noopener" data-cursor="Abrir ↗"><span class="at"><img src="assets/arquivo/t/muda-nordeste.jpg" alt="" loading="lazy"></span><span class="ab"><span class="ak mono">Mobilização</span><b>Muda Nordeste com Flávio 22 · A hora é agora</b><span class="am mono">Flávio Bolsonaro e Alfredo Gaspar · AL · out 2026</span><span class="ast on">no ar</span></span></a>
-<a class="ac" data-f="mold" data-live="1" href="https://molduramudanordeste.flaviobolsonaro.com.br" target="_blank" rel="noopener" data-cursor="Abrir ↗"><span class="at"><img src="assets/arquivo/t/muda-nordeste-moldura.jpg" alt="" loading="lazy"></span><span class="ab"><span class="ak mono">Moldura</span><b>Moldura para foto · Muda Nordeste com Flávio 22</b><span class="am mono">Flávio Bolsonaro e Alfredo Gaspar · AL · out 2026</span><span class="ast on">no ar</span></span></a>
-<a class="ac" data-f="card" data-live="1" href="https://mudanordeste.flaviobolsonaro.com.br/card" target="_blank" rel="noopener" data-cursor="Abrir ↗"><span class="at"><img src="assets/arquivo/t/muda-nordeste-card.jpg" alt="" loading="lazy"></span><span class="ab"><span class="ak mono">Card</span><b>Baixe seu card · Muda Nordeste com Flávio 22</b><span class="am mono">Flávio Bolsonaro e Alfredo Gaspar · AL · out 2026</span><span class="ast on">no ar</span></span></a>
-<a class="ac" data-f="mob" data-live="1" href="https://acordanordeste.com.br" target="_blank" rel="noopener" data-cursor="Abrir ↗"><span class="at"><img src="assets/arquivo/t/acorda-nordeste.jpg" alt="" loading="lazy"></span><span class="ab"><span class="ak mono">Mobilização</span><b>Acorda Nordeste — Ordem, fé e trabalho</b><span class="am mono">Flávio Bolsonaro e Alfredo Gaspar · ago 2026</span><span class="ast on">no ar</span></span></a>
+<a class="ac" data-f="mob" data-live="1" href="https://mudanordeste.flaviobolsonaro.com.br" target="_blank" rel="noopener" data-cursor="Abrir ↗"><span class="at"><img src="assets/arquivo/t/muda-nordeste.jpg" alt="" loading="lazy"></span><span class="ab"><span class="ak mono">Mobilização</span><b>Muda Nordeste com Flávio 22 · A hora é agora</b><span class="am mono">Campanha presidencial Bolsonaro · AL · out 2026</span><span class="ast on">no ar</span></span></a>
+<a class="ac" data-f="mold" data-live="1" href="https://molduramudanordeste.flaviobolsonaro.com.br" target="_blank" rel="noopener" data-cursor="Abrir ↗"><span class="at"><img src="assets/arquivo/t/muda-nordeste-moldura.jpg" alt="" loading="lazy"></span><span class="ab"><span class="ak mono">Moldura</span><b>Moldura para foto · Muda Nordeste com Flávio 22</b><span class="am mono">Campanha presidencial Bolsonaro · AL · out 2026</span><span class="ast on">no ar</span></span></a>
+<a class="ac" data-f="card" data-live="1" href="https://mudanordeste.flaviobolsonaro.com.br/card" target="_blank" rel="noopener" data-cursor="Abrir ↗"><span class="at"><img src="assets/arquivo/t/muda-nordeste-card.jpg" alt="" loading="lazy"></span><span class="ab"><span class="ak mono">Card</span><b>Baixe seu card · Muda Nordeste com Flávio 22</b><span class="am mono">Campanha presidencial Bolsonaro · AL · out 2026</span><span class="ast on">no ar</span></span></a>
 <a class="ac" data-f="mob" data-live="1" href="https://timedoalfredo.com.br" target="_blank" rel="noopener" data-cursor="Abrir ↗"><span class="at"><img src="assets/arquivo/t/time-do-alfredo.jpg" alt="" loading="lazy"></span><span class="ab"><span class="ak mono">Mobilização</span><b>Vem pro time do Alfredo Gaspar</b><span class="am mono">Alfredo Gaspar · AL · ago 2026</span><span class="ast on">no ar</span></span></a>
 <a class="ac" data-f="card" data-live="1" href="https://baixeseucard.feliperibeiromg.com.br" target="_blank" rel="noopener" data-cursor="Abrir ↗"><span class="at"><img src="assets/arquivo/t/card-felipe-dalmo.jpg" alt="" loading="lazy"></span><span class="ab"><span class="ak mono">Card</span><b>Sou de Minas e estou com Felipe do Dalmo Ribeiro</b><span class="am mono">Felipe do Dalmo Ribeiro · MG · set 2026</span><span class="ast on">no ar</span></span></a>
 <a class="ac" data-f="card" data-live="1" href="https://cardcleitinho.feliperibeiromg.com.br" target="_blank" rel="noopener" data-cursor="Abrir ↗"><span class="at"><img src="assets/arquivo/t/card-felipe-cleitinho.jpg" alt="" loading="lazy"></span><span class="ab"><span class="ak mono">Card</span><b>Sou de Minas e estou com Felipe 2022 e Cleitinho 10</b><span class="am mono">Felipe do Dalmo Ribeiro e Cleitinho · MG · set 2026</span><span class="ast on">no ar</span></span></a>
@@ -1292,21 +1289,20 @@ a.ac:hover .at img{transform:scale(1.05)}
   <div class="about-grid">
     <span></span>
     <div>
-      <p class="statement">Gosto de projeto com <em>prazo</em>, <em>métrica</em> e gente usando no dia seguinte.</p>
+      <p class="statement">Em 2026 eu passei a eleição inteira <em>colocando site no ar.</em></p>
       <div class="about-text" data-reveal>
-        <p>Sou Arthur Gil, desenvolvedor front-end em Minas Gerais. Trabalho entre produto, design e dados: entendo o problema, desenho a solução e coloco no ar, do layout ao banco.</p>
-        <p>Em 2026 passei a eleição inteira dentro da MOBI: 13 campanhas em 6 estados, de sites de mobilização e kits de card, moldura e colinha a painéis de apuração ao vivo. Uso IA para ir mais rápido, nunca para pensar menos.</p>
+        <p>Sou o Arthur Gil, dev front-end de Minas e cruzeirense. Comecei fazendo landing page e fui puxando o resto junto: banco de dados, painel, login, card que se monta no celular e colinha que o eleitor salva antes de ir votar.</p>
+        <p>Pela MOBI foram 13 campanhas em 6 estados. Teve semana com card, moldura e colinha saindo para o mesmo candidato, e noite de apuração com o painel aberto para o país inteiro. Fora da política, fiz o LeanOS com o Albert Gil, o site da Fernandes Planejados e o devocional Governados pela Palavra. No dia a dia uso React, Supabase, Cloudflare, Lovable e Claude Code.</p>
       </div>
     </div>
     <figure class="chibi float" data-chibi>
-      <img src="assets/chibi/cruzeiro.png" alt="" onerror="this.closest('.chibi').classList.add('is-empty')">
-      <figcaption class="mono">chibi · cruzeiro</figcaption>
+      <img src="assets/chibi/chibi-3.png" alt="" onerror="this.closest('.chibi').classList.add('is-empty')">
     </figure>
   </div>
   <div class="principles" data-reveal>
-    <div><span class="mono">01</span><b>Do briefing ao ar</b><p>Entrego produto funcionando, não protótipo bonito que ninguém usa.</p></div>
-    <div><span class="mono">02</span><b>Dado antes de opinião</b><p>Se dá para medir, eu meço. Se não dá, eu falo que não dá.</p></div>
-    <div><span class="mono">03</span><b>Feito para durar</b><p>Código que outra pessoa entende e conteúdo que o cliente consegue editar.</p></div>
+    <div><span class="mono">01</span><b>Celular primeiro</b><p>Quase todo mundo que abre um site de campanha está no celular, no meio de uma conversa de WhatsApp. Desenho para essa tela e depois ajusto o resto.</p></div>
+    <div><span class="mono">02</span><b>Gerado no próprio aparelho</b><p>Card, moldura e colinha são montados no celular de quem usa. Não tem servidor para cair na véspera da eleição nem custo por imagem.</p></div>
+    <div><span class="mono">03</span><b>Painel junto com o site</b><p>A página de mobilização sai com um painel para a equipe acompanhar cadastros, cidades e o funil do dia, com os números dos apoiadores escondidos.</p></div>
   </div>
   <div class="stack-wrap">
     <div class="stack" data-reveal>
@@ -1315,8 +1311,7 @@ a.ac:hover .at img{transform:scale(1.05)}
       <div><h5 class="mono">Produto</h5><ul><li>Figma</li><li>Claude Code & Lovable</li><li>GitHub & CI</li><li>SEO e prévias de link</li></ul></div>
     </div>
     <figure class="chibi float" data-chibi>
-      <img src="assets/chibi/relogio.png" alt="" onerror="this.closest('.chibi').classList.add('is-empty')">
-      <figcaption class="mono">chibi · relógio</figcaption>
+      <img src="assets/chibi/chibi-4.png" alt="" onerror="this.closest('.chibi').classList.add('is-empty')">
     </figure>
   </div>
 </section>
@@ -1330,12 +1325,11 @@ a.ac:hover .at img{transform:scale(1.05)}
 <section class="contact" id="contato" data-tint="#2F6BFF">
   <div class="contact-grid">
     <figure class="chibi" data-chibi>
-      <img src="assets/chibi/kamehameha.png" alt="" onerror="this.closest('.chibi').classList.add('is-empty')">
-      <figcaption class="mono">chibi · kamehameha</figcaption>
+      <img src="assets/chibi/chibi-5.png" alt="" onerror="this.closest('.chibi').classList.add('is-empty')">
     </figure>
     <div>
       <span class="mono" style="color:var(--accent)">(04) Contato</span>
-      <h2><span class="prox">Tem um projeto?</span><em data-reveal>Vamos colocar no ar.</em></h2>
+      <h2><span class="prox">Quer um desses?</span><em data-reveal>Me manda um e-mail.</em></h2>
     </div>
   </div>
   <div class="contact-row">
@@ -1343,7 +1337,7 @@ a.ac:hover .at img{transform:scale(1.05)}
     <div class="contact-list">
       <span class="mono">E-mail · clique para copiar</span>
       <div><button class="copy" id="copy" type="button"></button><span class="copied mono" id="copied">copiado ✓ · ctrl+v com moderação</span></div>
-      <div class="socials"><a href="https://github.com/Thur-zi" target="_blank" rel="noopener">GitHub ↗</a></div>
+      <div class="socials"><a href="https://www.linkedin.com/in/arthur-gil-9b1b96265/" target="_blank" rel="noopener">LinkedIn ↗</a><a href="https://www.instagram.com/arthur_gil_gui/" target="_blank" rel="noopener">Instagram ↗</a><a href="https://github.com/Thur-zi" target="_blank" rel="noopener">GitHub ↗</a></div>
     </div>
   </div>
 </section>
@@ -1516,12 +1510,35 @@ new IntersectionObserver(([e], o) => { if (e.isIntersecting) { $('#kits').classL
 const wallWrap = $('#wallwrap'), wall = $('#wall'), wallName = $('#wall-name'), reelRows = $('#idx');
 const rowsIdx = $$('#idx a'), cols = $$('#wall .col');
 const reelNames = rowsIdx.map(r => $('.t b', r).textContent);
+/* mede onde a coluna aparece na tela e ajusta o deslize até ela ficar no centro do mural */
+let wallShift = 0;
+function shiftFor(i) {
+  const col = cols[i], prev = wallShift;
+  wall.style.transition = 'none';
+  let sh = 0;
+  const colX = () => {
+    const r = wallWrap.getBoundingClientRect(), midY = r.top + r.height / 2;
+    const pts = $$('.tile', col).map(t => { const q = t.getBoundingClientRect(); return [q.top + q.height / 2, q.left + q.width / 2]; });
+    const n = pts.length, my = pts.reduce((a, p) => a + p[0], 0) / n, mx = pts.reduce((a, p) => a + p[1], 0) / n;
+    const sxy = pts.reduce((a, p) => a + (p[0] - my) * (p[1] - mx), 0), syy = pts.reduce((a, p) => a + (p[0] - my) ** 2, 0) || 1;
+    return { x: mx + sxy / syy * (midY - my), target: r.left + r.width * .52 };
+  };
+  for (let k = 0; k < 6; k++) {
+    wall.style.setProperty('--shift', sh + 'px');
+    const { x, target } = colX(), dx = target - x;
+    if (Math.abs(dx) < 3) break;
+    sh += dx / .9;
+  }
+  wall.style.setProperty('--shift', prev + 'px'); void wall.offsetWidth;
+  wall.style.transition = '';
+  wallShift = sh;
+  return sh;
+}
 function focusCase(i) {
-  if (i == null) { delete wall.dataset.focus; reelRows.classList.remove('focus'); }
+  if (i == null) { delete wall.dataset.focus; reelRows.classList.remove('focus'); wallShift = 0; }
   else { wall.dataset.focus = i; reelRows.classList.add('focus'); }
   cols.forEach((c, j) => c.classList.toggle('on', j === i));
-  const step = cols[1].offsetLeft - cols[0].offsetLeft;
-  wall.style.setProperty('--shift', i == null ? '0px' : (-(i - (cols.length - 1) / 2) * step * .85) + 'px');
+  wall.style.setProperty('--shift', (i == null ? 0 : shiftFor(i)) + 'px');
   rowsIdx.forEach((r, j) => r.classList.toggle('on', j === i));
   const label = i == null ? 'Todos os projetos' : `${String(i + 1).padStart(2, '0')} · ${reelNames[i]}`;
   if (wallName.dataset.final !== label) { wallName.dataset.final = label; scramble(wallName, 380); }
