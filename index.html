@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Arthur Gil · Desenvolvedor front-end</title>
 <meta name="description" content="Arthur Gil, desenvolvedor front-end em Minas Gerais. Cases de campanhas digitais, dados eleitorais, SaaS e sites que vendem.">
 <meta name="theme-color" content="#06101F">
@@ -609,6 +609,94 @@ a.ac:hover .at img{transform:scale(1.05)}
 .arq-more{display:flex;justify-content:center;margin-top:28px}
 .arq-more[hidden]{display:none}
 </style>
+<style>
+/* ================= v11 · versão celular ================= */
+.menu-btn,.fab,.mnav,.swipe-ui,.t-touch{display:none}
+@media (hover:none){ .t-desk{display:none} .t-touch{display:inline} }
+
+@media (max-width:860px){
+  .nav{padding-top:calc(14px + env(safe-area-inset-top));padding-bottom:14px}
+  .nav .right{gap:12px}
+  .nav .avail{font-size:11px}
+  .menu-btn{display:grid;align-content:center;justify-items:center;gap:5px;width:42px;height:42px;border-radius:50%;border:1px solid var(--line-2);background:rgba(6,16,31,.75)}
+  .menu-btn i{display:block;width:16px;height:1.5px;background:var(--fg);transition:transform .4s var(--ease)}
+  html.menu-open .menu-btn i:first-child{transform:translateY(3.25px) rotate(45deg)}
+  html.menu-open .menu-btn i:last-child{transform:translateY(-3.25px) rotate(-45deg)}
+  html.menu-open,html.menu-open body{overflow:hidden}
+
+  .mnav{display:flex;position:fixed;inset:0;z-index:49;flex-direction:column;justify-content:space-between;padding:120px var(--gut) calc(34px + env(safe-area-inset-bottom));
+    background:radial-gradient(80% 55% at 95% 0%,rgba(47,107,255,.38),transparent 70%),radial-gradient(70% 45% at 0% 100%,rgba(46,229,157,.22),transparent 70%),#06101F;
+    clip-path:inset(0 0 100% 0);visibility:hidden;transition:clip-path .65s var(--ease),visibility 0s .65s}
+  html.menu-open .mnav{clip-path:inset(0 0 0 0);visibility:visible;transition:clip-path .65s var(--ease)}
+  .mnav ol{list-style:none;display:grid;gap:4px}
+  .mnav li a{display:flex;align-items:baseline;gap:14px;font:600 clamp(42px,13vw,68px)/1.08 var(--display);letter-spacing:-.045em;color:var(--fg);
+    transform:translateY(40px);opacity:0;transition:transform .7s var(--ease),opacity .45s;transition-delay:calc(var(--i) * 70ms + 120ms)}
+  html.menu-open .mnav li a{transform:none;opacity:1}
+  .mnav li a .mono{font-size:12px;color:var(--accent);letter-spacing:.04em}
+  .mnav-foot{display:grid;gap:10px}
+  .mnav-mail{font:600 19px var(--display);letter-spacing:-.02em;color:var(--fg)}
+
+  .fab{display:inline-flex;align-items:center;position:fixed;right:var(--gut);bottom:calc(16px + env(safe-area-inset-bottom));z-index:48;padding:14px 20px;border-radius:99px;background:var(--grad);color:#06101F;
+    font:600 12px var(--mono);text-transform:uppercase;letter-spacing:.05em;box-shadow:0 14px 34px -10px rgba(46,229,157,.55);transform:translateY(140%);opacity:0;transition:transform .5s var(--ease),opacity .3s}
+  .fab.on{transform:none;opacity:1}
+  html.menu-open .fab{opacity:0}
+  .hud{display:none!important}
+  .hero-gl{display:none}
+  .chibi.is-empty{display:none}
+
+  .sec{padding-top:80px}
+  .case{margin-top:60px}
+  .case-in{padding-top:40px}
+  .sec-head h2{font-size:clamp(30px,9vw,44px)}
+
+  /* capa: título sempre cabe (ajustado por script) */
+  .cover-title span{white-space:nowrap}
+
+  /* peças: fileira que desliza */
+  .pieces,.pieces.pieces-5{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:10px;background:none;border:0;border-radius:0;margin:0 calc(var(--gut) * -1);padding:2px var(--gut) 6px;scrollbar-width:none}
+  .pieces::-webkit-scrollbar{display:none}
+  .piece{flex:0 0 66%;scroll-snap-align:start;scroll-margin-left:var(--gut);border:1px solid var(--line-2);border-radius:16px;background:var(--bg-2)}
+  .piece .mono{margin-bottom:14px}
+
+  /* etapas: carrossel que desliza */
+  .case-body{margin-top:30px}
+  .steps{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;margin:0 calc(var(--gut) * -1);padding:4px var(--gut) 6px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  .steps::-webkit-scrollbar{display:none}
+  .step{flex:0 0 86%;scroll-snap-align:center;min-height:0;justify-content:flex-start;padding:14px 14px 20px;border:1px solid var(--line-2);border-radius:20px;background:var(--bg-2)}
+  .step .step-img{order:-1;margin:0 0 16px;border-radius:12px}
+  .step .step-img.step-img-phone{width:46%;align-self:center}
+  .step h4{font-size:21px;margin-bottom:12px}
+  .step p{font-size:15px}
+  .step .lbl{margin-bottom:10px}
+  .swipe-ui{display:flex;align-items:center;justify-content:space-between;margin-top:14px;color:var(--muted);font-size:11px}
+  .swipe-dots{display:flex;gap:6px}
+  .swipe-dots i{display:block;width:6px;height:6px;border-radius:99px;background:var(--line-2);transition:width .3s var(--ease),background .3s}
+  .swipe-dots i.on{width:20px;background:var(--accent)}
+
+  .results{margin-top:26px}
+  .res b{font-size:clamp(28px,9vw,40px)}
+
+  /* kits: cartões em vez de tabela */
+  .kits-scroll{overflow:visible;border:0;background:none;border-radius:0}
+  .kits{min-width:0;display:grid;gap:10px}
+  .kh{display:none!important}
+  .kr{display:flex;flex-wrap:wrap;gap:10px 16px;padding:14px 16px;border:1px solid var(--line-2)!important;border-radius:16px;background:rgba(10,24,48,.55)}
+  .kn{width:100%}
+  .kn b{font-size:16px}
+  .kc{justify-content:flex-start;align-items:center;gap:5px}
+  .kc::before{content:attr(data-col);font:500 10px var(--mono);text-transform:uppercase;letter-spacing:.04em;color:var(--muted);margin-right:3px}
+  .kc.empty,.kt{display:none}
+  .kd{width:12px;height:12px}
+
+  .arq-head{margin-top:56px}
+  .chips{flex-wrap:nowrap;overflow-x:auto;margin:0 calc(var(--gut) * -1) 20px;padding:0 var(--gut) 4px;scrollbar-width:none}
+  .chips::-webkit-scrollbar{display:none}
+  .chip{flex:none}
+
+  .contact-row{padding-left:44px;gap:44px}
+  footer{padding-bottom:calc(90px + env(safe-area-inset-bottom))}
+}
+</style>
 </head>
 
 
@@ -644,8 +732,22 @@ a.ac:hover .at img{transform:scale(1.05)}
     <li><a href="#sobre">Sobre</a></li>
     <li><a href="#contato">Contato</a></li>
   </ul>
-  <div class="right"><span class="avail"><i></i>Disponível</span><span class="clock" id="clock">BH --:--</span></div>
+  <div class="right"><span class="avail"><i></i>Disponível</span><span class="clock" id="clock">BH --:--</span><button class="menu-btn" id="menu-btn" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="mnav"><i></i><i></i></button></div>
 </nav>
+<div class="mnav" id="mnav" aria-hidden="true">
+  <ol>
+    <li style="--i:0"><a href="#cases"><span class="mono">01</span>Cases</a></li>
+    <li style="--i:1"><a href="#arquivo"><span class="mono">02</span>Arquivo</a></li>
+    <li style="--i:2"><a href="#sobre"><span class="mono">03</span>Sobre</a></li>
+    <li style="--i:3"><a href="#contato"><span class="mono">04</span>Contato</a></li>
+  </ol>
+  <div class="mnav-foot">
+    <span class="mono" style="color:var(--muted)">E-mail</span>
+    <a class="mnav-mail" id="mnav-mail" href="#"></a>
+    <div class="socials"><a href="https://www.linkedin.com/in/arthur-gil-9b1b96265/" target="_blank" rel="noopener">LinkedIn ↗</a><a href="https://www.instagram.com/arthur_gil_gui/" target="_blank" rel="noopener">Instagram ↗</a><a href="https://github.com/Thur-zi" target="_blank" rel="noopener">GitHub ↗</a></div>
+  </div>
+</div>
+<a class="fab" id="fab" href="#contato">Falar comigo ↗</a>
 
 <main id="top">
 
@@ -689,7 +791,7 @@ a.ac:hover .at img{transform:scale(1.05)}
       <div class="reel-head">
         <span class="n mono" data-scramble>(01) Cases</span>
         <h2 data-split>Seis destaques, <em>todos no ar.</em></h2>
-        <p>Passe o mouse num nome para acender o projeto no mural. Clique para abrir o case completo.</p>
+        <p><span class="t-desk">Passe o mouse num nome para acender o projeto no mural. Clique para abrir o case completo.</span><span class="t-touch">Toque num nome para abrir o case completo.</span></p>
       </div>
       <ol class="reel-rows" id="idx">
           <li><a href="#case-muda" data-p="0" data-cursor="Ver case"><span class="num mono">01</span><span class="t"><b>Muda Nordeste</b><span class="tag">destaque</span></span><span class="y mono">2026</span><span class="k mono">Mobilização · 2º turno</span><span class="ar" aria-hidden="true">→</span></a></li>
@@ -1186,7 +1288,7 @@ a.ac:hover .at img{transform:scale(1.05)}
   <div class="kits-wrap">
     <div class="kits-intro">
       <h3>Kits de campanha</h3>
-      <p>Cada linha é uma candidatura; cada ponto aceso, uma peça entregue. Clique num ponto para abrir a peça no ar.</p>
+      <p>Cada linha é uma candidatura; cada ponto aceso, uma peça entregue. <span class="t-desk">Clique</span><span class="t-touch">Toque</span> num ponto para abrir a peça no ar.</p>
     </div>
     <div class="kits-scroll"><div class="kits" id="kits">
       <div class="kr kh mono"><span>Campanha</span><span>Mobilização</span><span>Landing</span><span>Card</span><span>Moldura</span><span>Colinha</span><span>Total</span></div>
@@ -1485,7 +1587,7 @@ new IntersectionObserver(([e]) => {
 /* ---------- arquivo: filtros e kits ---------- */
 const arqCards = $$('#arq-grid .ac'), chipsEl = $('#chips'), onlyLive = $('#only-live');
 let arqF = 'todos', arqAll = false;
-const arqMore = $('#arq-more'), ARQ_FIRST = 12;
+const arqMore = $('#arq-more'), ARQ_FIRST = innerWidth <= 860 ? 8 : 12;
 function applyArq() {
   const match = arqCards.filter(c => (arqF === 'todos' || c.dataset.f === arqF) && (!onlyLive.checked || c.dataset.live === '1'));
   arqCards.forEach(c => { c.hidden = true; });
@@ -1566,7 +1668,13 @@ function fitText() {
   const hn = $('.hero-name');
   if (hn) { hn.style.fontSize = ''; const fs = parseFloat(getComputedStyle(hn).fontSize), w = hn.scrollWidth, t = hn.parentElement.clientWidth * .985; if (w) hn.style.fontSize = Math.min(fs * t / w, 520) + 'px'; }
   $$('.cover-title').forEach(ct => {
-    ct.style.fontSize = ''; if (innerWidth <= 860) return;
+    ct.style.fontSize = '';
+    if (innerWidth <= 860) {
+      const cv = ct.closest('.cover'), cs = getComputedStyle(cv), avail = cv.clientWidth - parseFloat(cs.paddingLeft) - parseFloat(cs.paddingRight);
+      const fs = parseFloat(getComputedStyle(ct).fontSize), widest = Math.max(...$$('span', ct).map(x => x.scrollWidth));
+      if (widest > avail) ct.style.fontSize = (fs * avail / widest * .97) + 'px';
+      return;
+    }
     const fs = parseFloat(getComputedStyle(ct).fontSize), w = ct.scrollWidth, t = innerWidth * .86;
     if (w) ct.style.fontSize = Math.min(fs * t / w, 240) + 'px';
   });
@@ -1574,9 +1682,47 @@ function fitText() {
 document.fonts.ready.then(fitText);
 let fitT; addEventListener('resize', () => { clearTimeout(fitT); fitT = setTimeout(() => { fitText(); window.ScrollTrigger && ScrollTrigger.refresh(); }, 150); });
 
+/* ---------- celular: menu, botão flutuante, carrosséis ---------- */
+const isPhone = () => innerWidth <= 860;
+const menuBtn = $('#menu-btn'), mnav = $('#mnav');
+$('#mnav-mail').textContent = EMAIL; $('#mnav-mail').href = `mailto:${EMAIL}?subject=${encodeURIComponent('Projeto: vi seu portfólio')}`;
+function setMenu(open) {
+  root.classList.toggle('menu-open', open);
+  menuBtn.setAttribute('aria-expanded', open); menuBtn.setAttribute('aria-label', open ? 'Fechar menu' : 'Abrir menu');
+  mnav.setAttribute('aria-hidden', !open);
+  if (window.__lenis) open ? window.__lenis.stop() : window.__lenis.start();
+}
+menuBtn.addEventListener('click', () => setMenu(!root.classList.contains('menu-open')));
+$$('#mnav a[href^="#"]').forEach(a => a.addEventListener('click', () => setMenu(false)));
+addEventListener('keydown', e => { if (e.key === 'Escape' && root.classList.contains('menu-open')) setMenu(false); });
+
+const fab = $('#fab'); let pastHero = false, atContact = false;
+const fabSync = () => fab.classList.toggle('on', pastHero && !atContact);
+new IntersectionObserver(([e]) => { pastHero = !e.isIntersecting; fabSync(); }).observe($('.hero'));
+new IntersectionObserver(([e]) => { atContact = e.isIntersecting; fabSync(); }, { threshold: .15 }).observe($('#contato'));
+
+$$('.steps').forEach(st => {
+  const steps = $$('.step', st), ui = document.createElement('div');
+  ui.className = 'swipe-ui mono';
+  ui.innerHTML = `<span class="swipe-dots">${steps.map((_, i) => `<i${i ? '' : ' class="on"'}></i>`).join('')}</span><span>Deslize as etapas →</span>`;
+  st.after(ui);
+  const dots = $$('i', ui);
+  let raf = 0;
+  st.addEventListener('scroll', () => {
+    if (raf) return;
+    raf = requestAnimationFrame(() => {
+      raf = 0;
+      const mid = st.scrollLeft + st.clientWidth / 2;
+      let k = 0, bd = Infinity;
+      steps.forEach((s, i) => { const d = Math.abs(s.offsetLeft + s.offsetWidth / 2 - mid); if (d < bd) { bd = d; k = i; } });
+      dots.forEach((d, i) => d.classList.toggle('on', i === k));
+    });
+  }, { passive: true });
+});
+
 /* ---------- aurora em WebGL no topo ---------- */
 function initAurora() {
-  const cv = $('#gl'); if (!cv || reduce) return;
+  const cv = $('#gl'); if (!cv || reduce || innerWidth <= 860) return;
   const gl = cv.getContext('webgl', { antialias: false, alpha: false, powerPreference: 'low-power' }); if (!gl) return;
   const vs = 'attribute vec2 p;void main(){gl_Position=vec4(p,0.,1.);}';
   const fs = `precision mediump float;
@@ -1630,7 +1776,7 @@ if (window.gsap && !reduce) {
   gsap.registerPlugin(ScrollTrigger, SplitText);
   let lenis = null;
   if (window.Lenis) {
-    lenis = new Lenis({ lerp: .09 });
+    lenis = new Lenis({ lerp: .09 }); window.__lenis = lenis;
     lenis.on('scroll', ScrollTrigger.update);
     gsap.ticker.add(t => lenis.raf(t * 1000)); gsap.ticker.lagSmoothing(0);
     $$('a[href^="#"]').forEach(a => a.addEventListener('click', e => {
